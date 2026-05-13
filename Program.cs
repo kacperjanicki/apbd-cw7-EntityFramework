@@ -1,10 +1,12 @@
+using apbd_cw7_EntityFramework.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddScoped<PcsDbContext>();
 
 var app = builder.Build();
 
