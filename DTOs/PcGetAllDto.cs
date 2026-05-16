@@ -1,6 +1,6 @@
-namespace apbd_cw7_EntityFramework.Entities;
+namespace apbd_cw7_EntityFramework.DTOs;
 
-public class Pc
+public class PcGetAllDto
 {
     public int Id { get; set; }
     public string Name { get; set; } = null!;
@@ -8,6 +8,4 @@ public class Pc
     public int Warranty { get; set; }
     public DateTime CreatedAt { get; set; }
     public int Stock { get; set; }
-
-    public virtual ICollection<PcComponent> PcComponents { get; set; } = new List<PcComponent>();
 }
